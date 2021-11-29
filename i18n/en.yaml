@@ -24,3 +24,5 @@
   translation: Recommendations
 - id: certifications
   translation: Certifications
+- id: trainings
+  translation: Trainings
