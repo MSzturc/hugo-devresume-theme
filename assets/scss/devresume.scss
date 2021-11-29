@@ -220,6 +220,30 @@ a.resume-link {
 	color: #fb866a;
 }
 
+.translations-container {
+    position: relative;
+    color: $theme-text-color-primary;
+    right: 0px;
+    top: 0px;
+    transition: all 0.3s;
+
+    a {
+        display: inline-block;
+        padding: 6px 4px;
+        font-size: 12px;
+
+        &.currentLanguage {
+            font-weight: bold;
+        }
+    }
+
+    a:hover {
+        color: darken($theme-text-color-primary, 15%);
+        text-decoration: none;
+    }
+}
+
+
 // Styles to make it print friendly
 @media print {
 	.container { 
