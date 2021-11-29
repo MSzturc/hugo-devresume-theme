@@ -22,3 +22,5 @@
   translation: Skills
 - id: recommendations
   translation: Recommendations
+- id: certifications
+  translation: Certifications
