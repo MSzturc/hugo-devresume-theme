@@ -4,13 +4,55 @@
                                 <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "projects" }}</h3>
 
                                 {{ range .Site.Params.projects.list }}
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-24 col-md-12 col-lg-16 mb-2 mb-md-0">{{ .title | markdownify }}</h4>
-                                        <div class="item-meta col-24 col-md-12 col-lg-8 text-muted text-left text-md-right">{{ .meta | markdownify }}</div>
+                                <div class="item mb-5" style="page-break-inside: avoid;">
+
+                                    <div class="row">
+                                        <div class="col-24 col-md-7 mb-2 mb-md-0 text-muted item-content">{{ .dates | markdownify }}</div>
+                                        <h4 class="item-title col-24 col-md-17 mb-2">{{ .title | markdownify }}</h4>
                                     </div>
-                                    <div class="item-content">
-                                        <p>{{ .tagline | markdownify }}</p>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "branch" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .branch | markdownify }}</div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "customer" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .company | markdownify }}</div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "role" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .role | markdownify }}</div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "project_description" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">
+                                            {{ if .details }}
+                                            <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                                            {{ end }}
+                                            <ul class="">
+                                                {{ range .items }}
+                                                <li>{{ with .details }}{{ . | markdownify }}{{ end }}</li>
+                                                {{ end }}
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "technologies_used" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .tools | markdownify }}</div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "methods_used" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .methods | markdownify }}</div>
+                                    </div>
+
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "project_language" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .language | markdownify }}</div>
                                     </div>
                                 </div><!--//item-->
                                 {{ end }}

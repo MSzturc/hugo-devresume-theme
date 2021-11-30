@@ -28,3 +28,25 @@
   translation: Fortbildungen
 - id: membership
   translation: Gruppen
+- id: customer
+  translation: Kunde
+- id: role
+  translation: Rolle
+- id: project_description
+  translation: Beschreibung / Aufgaben
+- id: branch
+  translation: Branche
+- id: technologies_used
+  translation: Eingesetzte Technologien
+- id: methods_used
+  translation: Eingesetzte Methoden
+- id: project_language
+  translation: Projektsprache
+- id: tasks
+  translation: Aufgaben
+- id: models
+  translation: Modelle
+- id: methods
+  translation: Methoden
+- id: tools
+  translation: Werkzeuge

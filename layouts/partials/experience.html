@@ -4,11 +4,18 @@
                                 <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "experiences" }}</h3>
 
                                 {{ range .Site.Params.experience.list }}
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-24 col-md-12 col-lg-12 mb-2 mb-md-0">{{ .title | markdownify }}</h4>
-                                        <div class="item-meta col-24 col-md-12 col-lg-12 text-muted text-left text-md-right">{{ .company | markdownify }} | {{ .dates }}</div>
+                                <div class="item mb-3" style="page-break-inside: avoid;">
+
+                                    <div class="item-heading row">
+                                        <h4 class="item-title col-24">{{ .title | markdownify }}</h4>
                                     </div>
+
+                                    <div class="item-heading row mb-2">
+                                        <div class="item-meta col-12 text-muted text-left">{{ .company | markdownify }}</div>
+                                        <div class="item-meta col-12 text-muted text-right">{{ .dates }}</div>
+                                    </div>
+
+
                                     <div class="item-content">
                                         <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
                                         <ul class="resume-list">
@@ -17,6 +24,60 @@
                                             {{ end }}
                                         </ul>
                                     </div>
+
+                                    {{ range .roles }}
+                                    <div class="item-content ml-3">
+                                        <div class="item-heading row">
+                                            <h6 class="col-24">{{ .title | markdownify }}</h6>
+                                        </div>
+
+                                        <div class="ml-0 row">
+                                            <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                                            <ul class="resume-list">
+                                                {{ range .tasks }}
+                                                <li>{{ with . }}{{ . | markdownify }}{{ end }}</li>
+                                                {{ end }}
+                                            </ul>
+                                        </div>
+
+                                        <div class="ml-0 row">
+                                            {{ if .models }}
+                                            <div class="col-24 col-md-12">
+                                                <div class="ml-0 col-24">{{ i18n "models" }}:</div>
+                                                <ul class="resume-list">
+                                                    {{ range .models }}
+                                                    <li>{{ with . }}{{ . | markdownify }}{{ end }}</li>
+                                                    {{ end }}
+                                                </ul>
+                                            </div>
+                                            {{ end }}
+
+                                            {{ if .methods }}
+                                            <div class="col-24 col-md-12">
+                                                <div class="ml-0 col-24">{{ i18n "methods" }}:</div>
+                                                <ul class="resume-list">
+                                                    {{ range .methods }}
+                                                    <li>{{ with . }}{{ . | markdownify }}{{ end }}</li>
+                                                    {{ end }}
+                                                </ul>
+                                            </div>
+                                            {{ end }}
+
+                                            {{ if .tools }}
+                                            <div class="col-24 col-md-12">
+                                                <div class="ml-0 col-24">{{ i18n "tools" }}:</div>
+                                                <ul class="resume-list">
+                                                    {{ range .tools }}
+                                                    <li>{{ with . }}{{ . | markdownify }}{{ end }}</li>
+                                                    {{ end }}
+                                                </ul>
+                                            </div>
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                    
+
                                 </div><!--//item-->
                                 {{ end }}
 

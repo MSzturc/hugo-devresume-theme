@@ -28,3 +28,25 @@
   translation: Trainings
 - id: membership
   translation: Membership
+- id: customer
+  translation: Customer
+- id: role
+  translation: Role
+- id: project_description
+  translation: 'Task description'
+- id: branch
+  translation: Branch
+- id: technologies_used
+  translation: Technologies used
+- id: methods_used
+  translation: Methods used
+- id: project_language
+  translation: Language
+- id: tasks
+  translation: Tasks
+- id: models
+  translation: Models
+- id: methods
+  translation: Methods
+- id: tools
+  translation: Tools
