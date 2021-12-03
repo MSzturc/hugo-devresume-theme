@@ -116,6 +116,12 @@ a.theme-link {
    }
 }
 
+@media screen and (max-width: 576px) {
+	.resume-name {
+		font-size: 1.75rem !important;
+	}
+  }
+
 .resume-name {
 	font-size: 2.75rem;
 	font-weight: 900;
