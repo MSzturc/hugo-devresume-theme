@@ -36,6 +36,10 @@
   translation: 'Task description'
 - id: branch
   translation: Branch
+- id: models_used
+  translation: Models used
+- id: tools_used
+  translation: Tools used
 - id: technologies_used
   translation: Technologies used
 - id: methods_used

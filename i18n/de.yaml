@@ -36,6 +36,10 @@
   translation: Beschreibung / Aufgaben
 - id: branch
   translation: Branche
+- id: models_used
+  translation: Eingesetzte Modelle
+- id: tools_used
+  translation: Eingesetzte Werkzeuge
 - id: technologies_used
   translation: Eingesetzte Technologien
 - id: methods_used

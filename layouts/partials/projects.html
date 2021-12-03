@@ -40,15 +40,33 @@
                                         </div>
                                     </div>
 
+                                    {{ if .models }}
                                     <div class="row item-content">
-                                        <div class="col-24 col-md-7 text-muted">{{ i18n "technologies_used" }}:</div>
-                                        <div class="col-24 col-md-17 mb-2">{{ .tools | markdownify }}</div>
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "models_used" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .models | markdownify }}</div>
                                     </div>
+                                    {{ end }}
 
+                                    {{ if .methods }}
                                     <div class="row item-content">
                                         <div class="col-24 col-md-7 text-muted">{{ i18n "methods_used" }}:</div>
                                         <div class="col-24 col-md-17 mb-2">{{ .methods | markdownify }}</div>
                                     </div>
+                                    {{ end }}
+
+                                    {{ if .tools }}
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "tools_used" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .tools | markdownify }}</div>
+                                    </div>
+                                    {{ end }}
+
+                                    {{ if .technologies }}
+                                    <div class="row item-content">
+                                        <div class="col-24 col-md-7 text-muted">{{ i18n "technologies_used" }}:</div>
+                                        <div class="col-24 col-md-17 mb-2">{{ .technologies | markdownify }}</div>
+                                    </div>
+                                    {{ end }}
 
                                     <div class="row item-content">
                                         <div class="col-24 col-md-7 text-muted">{{ i18n "project_language" }}:</div>
