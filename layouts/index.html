@@ -56,6 +56,10 @@
                             {{ partial "trainings.html" . }}
                             {{ end }}
 
+                            {{ if .Site.Params.recommendations.enable }}
+                            {{ partial "recommendations.html" . }}
+                            {{ end }}
+
                         </div><!--//resume-main-->
 
                         {{ partial "sidebar.html" . }}
