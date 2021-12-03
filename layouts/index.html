@@ -48,6 +48,10 @@
                             {{ partial "projects.html" . }}
                             {{ end }}
 
+                            {{ if .Site.Params.highlights.enable }}
+                            {{ partial "highlights.html" . }}
+                            {{ end }}
+
                             {{ if .Site.Params.information.enable }}
                             {{ partial "information.html" . }}
                             {{ end }}
