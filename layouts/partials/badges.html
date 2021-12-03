@@ -1,0 +1,19 @@
+
+                            <section class="badges-section py-3">
+
+                                <h3 class="text-uppercase resume-section-heading mb-4">{{ i18n "certifications" }}</h3>
+
+                                <div class="d-flex flex-wrap">
+                                {{ range .Site.Params.certifications.list }}
+                                {{ if .logo }}
+                                
+                                    <div class="resume-badge-container mb-3 mb-md-3 mr-md-3">
+                                    <img class="resume-badge-image mb-2" src="{{ .Site.BaseURL }}assets/images/{{ .logo }}" alt="image">
+                                    <div class="text-center">{{ .title }}</div>
+                                    </div>
+                                
+                                {{ end }}
+                                {{ end }}
+                                </div>
+
+                            </section><!--//badges-section-->

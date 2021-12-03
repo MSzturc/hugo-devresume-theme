@@ -149,6 +149,19 @@ a.resume-link {
 	max-width: 120px;
 }
 
+.resume-badge-container {
+	max-width: 105px;
+	text-align: center;
+
+	font-size: .75rem;
+}
+
+.resume-badge-image {
+	max-width: 100px;
+	height: 100px;
+	object-fit: contain;
+}
+
 .resume-intro {
 	font-size: 0.875rem;
 }
@@ -255,6 +268,7 @@ a.resume-link {
 }
 
 
+
 // Styles to make it print friendly
 @media print {
 	.container { 
@@ -276,6 +290,13 @@ a.resume-link {
 	}
 	.hide-print {
 		display:none;
+	}
+	.project-section .item-content {
+		font-size: .75rem;
+	}
+
+	.project-section .item-title {
+		font-size: .8rem;
 	}
 }
 
