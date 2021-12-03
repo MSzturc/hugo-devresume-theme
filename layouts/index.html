@@ -16,8 +16,10 @@
 
             <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
 
+                {{ if .Site.Params.translation.enable }}
                 {{ if .IsTranslated }}
                 {{ partial "translate.html" . }}
+                {{ end }}
                 {{ end }}
 
                 {{ partial "header.html" . }}
