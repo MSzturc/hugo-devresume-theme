@@ -1,9 +1,9 @@
 - id: personal_info
   translation: Persönliche Infos
 - id: associations
-  translation: Associations
+  translation: Verbände
 - id: awards
-  translation: Awards
+  translation: Auszeichnungen
 - id: education
   translation: Ausbildung
 - id: experiences
@@ -23,7 +23,7 @@
 - id: recommendations
   translation: Empfehlungen
 - id: certifications
-  translation: Zertifikate
+  translation: Zertifizierung
 - id: trainings
   translation: Fortbildungen
 - id: membership
